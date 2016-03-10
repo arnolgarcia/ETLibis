@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sld:StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" version="1.0.0">
+    <sld:UserLayer>
+        <sld:LayerFeatureConstraints>
+            <sld:FeatureTypeConstraint/>
+        </sld:LayerFeatureConstraints>
+        <sld:UserStyle>
+            <sld:Name>Default Styler</sld:Name>
+            <sld:FeatureTypeStyle>
+                <sld:Name>name</sld:Name>
+                <sld:FeatureTypeName>Feature</sld:FeatureTypeName>
+                <sld:SemanticTypeIdentifier>generic:geometry</sld:SemanticTypeIdentifier>
+                <sld:SemanticTypeIdentifier>colorbrewer:quantile:personal</sld:SemanticTypeIdentifier>
+                <sld:Rule>
+                    <sld:Name>rule01</sld:Name>
+                    <sld:Title>menor a -10</sld:Title>
+                    <ogc:Filter>
+                        <ogc:PropertyIsLessThan>
+							<ogc:Function name="property">
+								<ogc:Function name="env">
+									<ogc:Literal>atributo</ogc:Literal>
+									<ogc:Literal>velocidad_last_day</ogc:Literal>
+								</ogc:Function>
+							</ogc:Function>								
+							<ogc:Literal>-10</ogc:Literal>
+                        </ogc:PropertyIsLessThan>
+                    </ogc:Filter>
+                    <sld:PointSymbolizer>
+                        <sld:Graphic>
+                            <sld:Mark>
+                                <sld:Fill>
+                                    <sld:CssParameter name="fill">#D53E4F</sld:CssParameter>
+                                </sld:Fill>
+                            </sld:Mark>
+                            <sld:Size>6.0</sld:Size>
+                        </sld:Graphic>
+                    </sld:PointSymbolizer>
+                </sld:Rule>
+                <sld:Rule>
+                    <sld:Name>rule02</sld:Name>
+                    <sld:Title>-10..-6</sld:Title>
+                    <ogc:Filter>
+                        <ogc:And>
+                            <ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:Function name="property">
+									<ogc:Function name="env">
+										<ogc:Literal>atributo</ogc:Literal>
+										<ogc:Literal>velocidad_last_day</ogc:Literal>
+									</ogc:Function>
+								</ogc:Function>								
+								<ogc:Literal>-10</ogc:Literal>
+                            </ogc:PropertyIsGreaterThanOrEqualTo>
+                            <ogc:PropertyIsLessThan>
+								<ogc:Function name="property">
+									<ogc:Function name="env">
+										<ogc:Literal>atributo</ogc:Literal>
+										<ogc:Literal>velocidad_last_day</ogc:Literal>
+									</ogc:Function>
+								</ogc:Function>								
+								<ogc:Literal>-6</ogc:Literal>
+                            </ogc:PropertyIsLessThan>
+                        </ogc:And>
+                    </ogc:Filter>
+                    <sld:PointSymbolizer>
+                        <sld:Graphic>
+                            <sld:Mark>
+                                <sld:Fill>
+                                    <sld:CssParameter name="fill">#FC8D59</sld:CssParameter>
+                                </sld:Fill>
+                            </sld:Mark>
+                            <sld:Size>6.0</sld:Size>
+                        </sld:Graphic>
+                    </sld:PointSymbolizer>
+                </sld:Rule>
+                <sld:Rule>
+                    <sld:Name>rule03</sld:Name>
+                    <sld:Title>-6..-2</sld:Title>
+                    <ogc:Filter>
+                        <ogc:And>
+                            <ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:Function name="property">
+									<ogc:Function name="env">
+										<ogc:Literal>atributo</ogc:Literal>
+										<ogc:Literal>velocidad_last_day</ogc:Literal>
+									</ogc:Function>
+								</ogc:Function>								
+								<ogc:Literal>-6</ogc:Literal>
+                            </ogc:PropertyIsGreaterThanOrEqualTo>
+                            <ogc:PropertyIsLessThan>
+								<ogc:Function name="property">
+									<ogc:Function name="env">
+										<ogc:Literal>atributo</ogc:Literal>
+										<ogc:Literal>velocidad_last_day</ogc:Literal>
+									</ogc:Function>
+								</ogc:Function>								
+								<ogc:Literal>-2</ogc:Literal>
+                            </ogc:PropertyIsLessThan>
+                        </ogc:And>
+                    </ogc:Filter>
+                    <sld:PointSymbolizer>
+                        <sld:Graphic>
+                            <sld:Mark>
+                                <sld:Fill>
+                                    <sld:CssParameter name="fill">#FEE08B</sld:CssParameter>
+                                </sld:Fill>
+                            </sld:Mark>
+                            <sld:Size>6.0</sld:Size>
+                        </sld:Graphic>
+                    </sld:PointSymbolizer>
+                </sld:Rule>
+                <sld:Rule>
+                    <sld:Name>rule04</sld:Name>
+                    <sld:Title>-2..2</sld:Title>
+                    <ogc:Filter>
+                        <ogc:And>
+                            <ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:Function name="property">
+									<ogc:Function name="env">
+										<ogc:Literal>atributo</ogc:Literal>
+										<ogc:Literal>velocidad_last_day</ogc:Literal>
+									</ogc:Function>
+								</ogc:Function>								
+								<ogc:Literal>-2</ogc:Literal>
+                            </ogc:PropertyIsGreaterThanOrEqualTo>
+                            <ogc:PropertyIsLessThan>
+								<ogc:Function name="property">
+									<ogc:Function name="env">
+										<ogc:Literal>atributo</ogc:Literal>
+										<ogc:Literal>velocidad_last_day</ogc:Literal>
+									</ogc:Function>
+								</ogc:Function>								
+								<ogc:Literal>2</ogc:Literal>
+                            </ogc:PropertyIsLessThan>
+                        </ogc:And>
+                    </ogc:Filter>
+                    <sld:PointSymbolizer>
+                        <sld:Graphic>
+                            <sld:Mark>
+                                <sld:Fill>
+                                    <sld:CssParameter name="fill">#00FF00</sld:CssParameter>
+                                </sld:Fill>
+                            </sld:Mark>
+                            <sld:Size>6.0</sld:Size>
+                        </sld:Graphic>
+                    </sld:PointSymbolizer>
+                </sld:Rule>
+                <sld:Rule>
+                    <sld:Name>rule05</sld:Name>
+                    <sld:Title>2..6</sld:Title>
+                    <ogc:Filter>
+                        <ogc:And>
+                            <ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:Function name="property">
+									<ogc:Function name="env">
+										<ogc:Literal>atributo</ogc:Literal>
+										<ogc:Literal>velocidad_last_day</ogc:Literal>
+									</ogc:Function>
+								</ogc:Function>								
+								<ogc:Literal>2</ogc:Literal>
+                            </ogc:PropertyIsGreaterThanOrEqualTo>
+                            <ogc:PropertyIsLessThan>
+								<ogc:Function name="property">
+									<ogc:Function name="env">
+										<ogc:Literal>atributo</ogc:Literal>
+										<ogc:Literal>velocidad_last_day</ogc:Literal>
+									</ogc:Function>
+								</ogc:Function>								
+								<ogc:Literal>6</ogc:Literal>
+                            </ogc:PropertyIsLessThan>
+                        </ogc:And>
+                    </ogc:Filter>
+                    <sld:PointSymbolizer>
+                        <sld:Graphic>
+                            <sld:Mark>
+                                <sld:Fill>
+                                    <sld:CssParameter name="fill">#8EBF80</sld:CssParameter>
+                                </sld:Fill>
+                            </sld:Mark>
+                            <sld:Size>6.0</sld:Size>
+                        </sld:Graphic>
+                    </sld:PointSymbolizer>
+                </sld:Rule>
+                <sld:Rule>
+                    <sld:Name>rule06</sld:Name>
+                    <sld:Title>6..10</sld:Title>
+                    <ogc:Filter>
+                        <ogc:And>
+                            <ogc:PropertyIsGreaterThanOrEqualTo>
+								<ogc:Function name="property">
+									<ogc:Function name="env">
+										<ogc:Literal>atributo</ogc:Literal>
+										<ogc:Literal>velocidad_last_day</ogc:Literal>
+									</ogc:Function>
+								</ogc:Function>								
+								<ogc:Literal>6</ogc:Literal>
+                            </ogc:PropertyIsGreaterThanOrEqualTo>
+                            <ogc:PropertyIsLessThan>
+								<ogc:Function name="property">
+									<ogc:Function name="env">
+										<ogc:Literal>atributo</ogc:Literal>
+										<ogc:Literal>velocidad_last_day</ogc:Literal>
+									</ogc:Function>
+								</ogc:Function>								
+								<ogc:Literal>10</ogc:Literal>
+                            </ogc:PropertyIsLessThan>
+                        </ogc:And>
+                    </ogc:Filter>
+                    <sld:PointSymbolizer>
+                        <sld:Graphic>
+                            <sld:Mark>
+                                <sld:Fill>
+                                    <sld:CssParameter name="fill">#9CCBED</sld:CssParameter>
+                                </sld:Fill>
+                            </sld:Mark>
+                            <sld:Size>6.0</sld:Size>
+                        </sld:Graphic>
+                    </sld:PointSymbolizer>
+                </sld:Rule>
+                <sld:Rule>
+                    <sld:Name>rule07</sld:Name>
+                    <sld:Title>mayor a 10</sld:Title>
+                    <ogc:Filter>
+                        <ogc:PropertyIsGreaterThanOrEqualTo>
+							<ogc:Function name="property">
+								<ogc:Function name="env">
+									<ogc:Literal>atributo</ogc:Literal>
+									<ogc:Literal>velocidad_last_day</ogc:Literal>
+								</ogc:Function>
+							</ogc:Function>								
+							<ogc:Literal>10</ogc:Literal>
+                        </ogc:PropertyIsGreaterThanOrEqualTo>
+                    </ogc:Filter>
+                    <sld:PointSymbolizer>
+                        <sld:Graphic>
+                            <sld:Mark>
+                                <sld:Fill>
+                                    <sld:CssParameter name="fill">#3288BD</sld:CssParameter>
+                                </sld:Fill>
+                            </sld:Mark>
+                            <sld:Size>6.0</sld:Size>
+                        </sld:Graphic>
+                    </sld:PointSymbolizer>
+                </sld:Rule>
+            </sld:FeatureTypeStyle>
+        </sld:UserStyle>
+    </sld:UserLayer>
+</sld:StyledLayerDescriptor>
+
